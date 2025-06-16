@@ -1,5 +1,3 @@
-import globals from 'globals';
-
 export default [
   {
     files: ['**/*.js'],
@@ -7,12 +5,19 @@ export default [
       ecmaVersion: 2022,
       sourceType: 'module',
       globals: {
-        ...globals.node,
+        process: 'readonly',
+        console: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        exports: 'readonly',
+        global: 'readonly',
+        Buffer: 'readonly'
       },
     },
     rules: {
       'indent': ['error', 2],
-      'linebreak-style': ['error', 'windows'],
       'quotes': ['error', 'single'],
       'semi': ['error', 'always'],
       'no-trailing-spaces': 'error',
@@ -31,5 +36,6 @@ export default [
       'no-multiple-empty-lines': ['error', { 'max': 1 }],
       'no-multi-spaces': 'error'
     },
-  },
+    ignores: ['node_modules/**', '.git/**']
+  }
 ];
