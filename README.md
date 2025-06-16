@@ -89,28 +89,3 @@ Menghapus buku dari koleksi berdasarkan ID.
   "updatedAt": "string"
 }
 ```
-
-## Code Quality
-
-Proyek ini menggunakan ESLint untuk menjaga konsistensi kode:
-
-```bash
-# Jalankan linting
-npm run lint
-
-# Auto-fix issues
-npx eslint . --fix
-```
-
-## Fitur
-
-✅ **Mandatory Features:**
-- CRUD operations untuk buku
-- Validasi data input
-- Response sesuai spesifikasi
-- Modular code structure
-
-✅ **Optional Features:**
-- Query parameters untuk filtering (name, reading, finished)
-- ESLint configuration dengan style guide
-- Tidak ada ESLint errors saat menjalankan `npx eslint .`
